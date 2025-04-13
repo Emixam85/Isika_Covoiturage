@@ -19,7 +19,7 @@ public class Trajet {
     List<Passager> passagers;
 
     public Trajet(String depart, String arrivee, int distance,
-    int dureeEstimee,  Conducteur conducteur, List<Passager> passagers){
+    int dureeEstimee,  Conducteur conducteur){//, List<Passager> passagers){
         this.depart = depart;
         this.arrivee = arrivee;
         this.distance = distance;

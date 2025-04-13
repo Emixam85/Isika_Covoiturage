@@ -1,5 +1,6 @@
 package fr.isika;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Passager extends Utilisateur{
@@ -11,13 +12,23 @@ public class Passager extends Utilisateur{
 */
     public Passager(String nom, String villeDepart, String villeArrivee, List<Trajet> trajetSuivi, String destinationPrefere){
         super(nom, villeDepart, villeArrivee);
-        this.trajetSuivi = trajetSuivi;
+        this.trajetSuivi = new ArrayList<Trajet>();
+        this.destinationPrefere = destinationPrefere;
+    }
+
+    public Passager(String nom, String villeDepart, String villeArrivee, String destinationPrefere){
+        super(nom, villeDepart, villeArrivee);
+        //this.trajetSuivi = trajetSuivi;
         this.destinationPrefere = destinationPrefere;
     
     }
 
-    public void suivreTrajet(){
-
+    public void suivreTrajet(Trajet trajet){
+       /*   if (this.trajetSuivi != null){ */
+        this.trajetSuivi.add(trajet);//}
+        /* else{
+            this.trajetSuivi = ;
+        } */
     }
 
     public void noterConducteur(){

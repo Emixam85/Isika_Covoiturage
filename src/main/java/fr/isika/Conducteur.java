@@ -30,8 +30,8 @@ public class Conducteur extends Utilisateur{
     }
     
 
-    public String afficherProfil(){
-        return "Conducteur : " + super.toString() + " | Véhicule : " + voiture + "\n|==> Trajet(s) :" + trajets.toArray(); 
+    public void afficherProfil(){
+        System.out.println("Conducteur : " + super.toString() + " | Véhicule : " + voiture + "\n|==> Trajet(s) :" + trajets.toArray()); 
     }
 
     public void ajouterTrajet(Trajet trajet){

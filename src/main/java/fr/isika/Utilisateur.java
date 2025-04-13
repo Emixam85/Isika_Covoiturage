@@ -20,8 +20,8 @@ public abstract class Utilisateur {
         this.villeArrivee = villeArrivee;
     }
 
-    public String afficherProfil(){
-        return this.nom + "\t Départ : " + this.villeDepart + "\tArrivée : " + this.villeArrivee; 
+    public void afficherProfil(){
+        System.out.println( this.nom + "\t Départ : " + this.villeDepart + "\tArrivée : " + this.villeArrivee); 
     }
 
     public String getNom() {
