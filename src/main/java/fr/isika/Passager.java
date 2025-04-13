@@ -5,18 +5,23 @@ import java.util.List;
 public class Passager extends Utilisateur{
     List<Trajet> trajetSuivi;
     String destinationPrefere;
-
-    public Passager(List<Trajet> trajetSuivi, String destinationPrefere){
-        super(destinationPrefere, destinationPrefere, destinationPrefere);
+/**
+* @param trajetSuivi est la liste des trajets empruntés par l'utilateur de type "passager"
+* @param destinationPrefere est la String représentant la vile préférée par l'utilateur de type "passager"
+*/
+    public Passager(String nom, String villeDepart, String villeArrivee, List<Trajet> trajetSuivi, String destinationPrefere){
+        super(nom, villeDepart, villeArrivee);
+        this.trajetSuivi = trajetSuivi;
+        this.destinationPrefere = destinationPrefere;
     
-    )
+    }
 
-    public void suivreTrajet{
+    public void suivreTrajet(){
 
     }
 
-    public noterConducteur(){
-        
+    public void noterConducteur(){
+
     }
 }
 

@@ -21,7 +21,31 @@ public abstract class Utilisateur {
     }
 
     public String afficherProfil(){
-        return nom + "\t Départ : " + villeDepart + "\tArrivée : " + villeArrivee; 
+        return this.nom + "\t Départ : " + this.villeDepart + "\tArrivée : " + this.villeArrivee; 
+    }
+
+    public String getNom() {
+        return nom;
+    }
+
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
+
+    public String getVilleDepart() {
+        return villeDepart;
+    }
+
+    public void setVilleDepart(String villeDepart) {
+        this.villeDepart = villeDepart;
+    }
+
+    public String getVilleArrivee() {
+        return villeArrivee;
+    }
+
+    public void setVilleArrivee(String villeArrivee) {
+        this.villeArrivee = villeArrivee;
     }
 
 }
