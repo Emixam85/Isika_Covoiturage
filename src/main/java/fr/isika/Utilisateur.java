@@ -1,14 +1,14 @@
 package fr.isika;
 /**
  * Cette classe abstraite represente les Utilisateurs
- * et sert de squellette pour constituer les classes
+ * et sert de squelette pour constituer les classes
  * d'utilisateurs tels que Conducteur et Passager
  */
 public abstract class Utilisateur {
 /**
 * @param nom est la String représentant le nom de l'utilisateur
-* @param villeDepart est la String représentant la vile de depart
-* @param villeArrivee est la String représentant la vile d'arrivee
+* @param villeDepart est la String représentant la ville de depart
+* @param villeArrivee est la String représentant la ville d'arrivee
 */
     private String nom;
     private String villeDepart;
@@ -20,10 +20,20 @@ public abstract class Utilisateur {
         this.villeArrivee = villeArrivee;
     }
 
+
+   /*  @Override
+    public String toString() {
+       
+        return "Nom : " +getNom().toString() + " | Ville départ : "+ getVilleDepart().toString() +" | Ville arrivée : "+ getVilleArrivee().toString() ;
+    } */
+
+
     public void afficherProfil(){
-        System.out.println( this.nom + "\t Départ : " + this.villeDepart + "\tArrivée : " + this.villeArrivee); 
+        System.out.println(" Nom : " +getNom().toString() + "\t Départ : " + getVilleDepart().toString() + "\tArrivée : " +  getVilleArrivee().toString()); 
     }
 
+
+    // Gets & Sets
     public String getNom() {
         return nom;
     }

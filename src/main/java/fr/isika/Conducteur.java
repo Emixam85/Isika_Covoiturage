@@ -4,6 +4,7 @@
 package fr.isika;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Conducteur extends Utilisateur{
@@ -26,12 +27,12 @@ public class Conducteur extends Utilisateur{
     public Conducteur(String nom, String villeDepart, String villeArrivee, String voiture, List<Trajet> trajets){
         super(nom, villeDepart, villeArrivee);
         this.voiture = voiture;
-        this.trajets = trajets;
+        this.trajets = new ArrayList<Trajet>();
     }
     
 
     public void afficherProfil(){
-        System.out.println("Conducteur : " + super.toString() + " | Véhicule : " + voiture + "\n|==> Trajet(s) :" + trajets.toArray()); 
+        System.out.println("Conducteur : " + this.getNom().toString() + " | Véhicule : " + voiture + ".\n");//trajets.get(0).toString()); 
     }
 
     public void ajouterTrajet(Trajet trajet){
@@ -40,6 +41,23 @@ public class Conducteur extends Utilisateur{
 
     public int calculerDistanceTotale(){
         return 0;
+    }
+    
+    // Gets & Sets
+    public String getVoiture() {
+        return voiture;
+    }
+
+    public void setVoiture(String voiture) {
+        this.voiture = voiture;
+    }
+
+    public List<Trajet> getTrajets() {
+        return trajets;
+    }
+
+    public void setTrajets(List<Trajet> trajets) {
+        this.trajets = trajets;
     }
 
 }

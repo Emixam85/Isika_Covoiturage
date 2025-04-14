@@ -16,16 +16,16 @@ public class Passager extends Utilisateur{
         this.destinationPrefere = destinationPrefere;
     }
 
-    public Passager(String nom, String villeDepart, String villeArrivee, String destinationPrefere){
+     public Passager(String nom, String villeDepart, String villeArrivee, String destinationPrefere){
         super(nom, villeDepart, villeArrivee);
-        //this.trajetSuivi = trajetSuivi;
+        this.trajetSuivi = new ArrayList<Trajet>();
         this.destinationPrefere = destinationPrefere;
     
     }
 
     public void suivreTrajet(Trajet trajet){
        /*   if (this.trajetSuivi != null){ */
-        this.trajetSuivi.add(trajet);//}
+        trajetSuivi.add(trajet);//}
         /* else{
             this.trajetSuivi = ;
         } */
@@ -34,5 +34,22 @@ public class Passager extends Utilisateur{
     public void noterConducteur(){
 
     }
+ // Gets & Sets
+    public List<Trajet> getTrajetSuivi() {
+        return trajetSuivi;
+    }
+
+    public void setTrajetSuivi(List<Trajet> trajetSuivi) {
+        this.trajetSuivi = trajetSuivi;
+    }
+
+    public String getDestinationPrefere() {
+        return destinationPrefere;
+    }
+
+    public void setDestinationPrefere(String destinationPrefere) {
+        this.destinationPrefere = destinationPrefere;
+    }
+    
 }
 
