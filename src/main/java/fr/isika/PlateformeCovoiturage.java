@@ -15,4 +15,8 @@ public class PlateformeCovoiturage {
         this.utilisateurs = new ArrayList<Utilisateur>();
         this.trajets = new ArrayList<Trajet>();
     }
+
+    public void collectTrajet(Trajet trajet){
+        this.trajets.add(trajet);
+    }
 }

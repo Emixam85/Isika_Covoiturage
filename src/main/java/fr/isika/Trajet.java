@@ -60,7 +60,25 @@ public class Trajet {
     public int calculerVitesseMoyenne(){
         return this.distance/this.dureeEstimee;
     }
-    
+
+    public boolean estLong(){
+        if(this.distance <= 300){
+            return false;
+        }
+        else{
+            return true;
+        }
+    }
+
+    public boolean estRapide(){
+        if (this.calculerVitesseMoyenne() <= 100){
+            return false;
+        }
+        else{
+            return true;
+        }
+    } 
+
  // Gets & Sets
     public String getDepart() {
         return depart;

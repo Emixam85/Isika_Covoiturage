@@ -17,18 +17,21 @@ public class App
         conduc1.ajouterTrajet(marseilleParis);
         
         Conducteur conduc2 = new Conducteur("Joe Letaxi", "Lille" , "Perpignan", "Bugatti Verone" );
-        Trajet lillePerpignan = new Trajet("Lille", "Perpignan" , 773, 463, conduc2);//, passag1)
-        conduc1.ajouterTrajet(lillePerpignan);
-        Trajet perpignanLille = new Trajet("Perpignan", "Lille" , 773, 463, conduc2);//, passag1)
-        conduc1.ajouterTrajet(perpignanLille);
+        Trajet lillePerpignan = new Trajet("Lille", "Perpignan" , 1095, (14*60)+7, conduc2);//, passag1)
+        conduc2.ajouterTrajet(lillePerpignan);
+        Trajet perpignanLille = new Trajet("Perpignan", "Lille" , 1095, (14*60)+7, conduc2);//, passag1)
+        conduc2.ajouterTrajet(perpignanLille);
         
         conduc1.afficherProfil();
+        conduc2.afficherProfil();
 
         Passager passag1 = new Passager("Alfred", "Paris", "Marseille", "Marseille");
         
         parisMarseille.ajouterPassager(passag1);
        
         passag1.suivreTrajet(parisMarseille);
+        //PlateformeCovoiturage.collectTrajet(parisMarseille);
+        passag1.suivreTrajet(lillePerpignan);
         parisMarseille.toString();
         passag1.afficherProfil();
     }
