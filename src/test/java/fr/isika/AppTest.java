@@ -1,20 +1,18 @@
 package fr.isika;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
-import org.junit.Test;
+import java.util.ArrayList;
+import java.util.List;
 
-/**
- * Unit test for simple App.
- */
+import org.junit.jupiter.api.Test;
+
 public class AppTest 
 {
-    /**
-     * Rigorous Test :-)
-     */
     @Test
     public void shouldAnswerWithTrue()
     {
-        assertTrue( true );
+        
     }
 }
